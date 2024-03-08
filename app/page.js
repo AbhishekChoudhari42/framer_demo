@@ -43,7 +43,7 @@ export default function Home() {
     <div ref={targetRef} className="flex min-h-screen flex-col items-center justify-between">
 
       {/* <div className="w-screen h-screen bg-black"></div> */}
-      <div className="w-screen h-screen bg-[#fff3cd]"></div>
+      <div className="w-screen h-screen bg-[#fff]"></div>
       {/* ============================ */}
 
 
@@ -106,7 +106,7 @@ export default function Home() {
 
 
       {/* ============================ */}
-      <div className="w-screen h-screen bg-[#fff3cd] p-16 flex justify-between items-center max-sm:flex-col gap-16">
+      <div className="w-screen h-screen bg-[#fff] p-16 flex justify-between items-center max-sm:flex-col gap-16">
         <div className="flex-grow h-full bg-black overflow-hidden">
           <motion.div 
           
@@ -127,7 +127,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-screen h-screen bg-[#fff3cd]"></div>
+      <div className="w-screen h-screen bg-[#fff]"></div>
 
 
     </div>
