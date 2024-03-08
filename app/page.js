@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from "framer-motion"
 import Lenis from "@studio-freight/lenis";
+import { images } from "@/constants";
+
 export default function Home() {
 
   
@@ -30,20 +32,22 @@ export default function Home() {
   })
 
 
-  const y1 = useTransform(scrollYProgress,[0,1],['0%','-20%'])
+  const y1 = useTransform(scrollYProgress,[0,1],['0%','50%'])
   const y2 = useTransform(scrollYProgress,[0,1],['0%','-100%'])
   const y3 = useTransform(scrollYProgress,[0,1],['0%','-70%'])
   const y4 = useTransform(scrollYProgress,[0,1],['0%','-120%'])
 
+  const scale = useTransform(scrollYProgress,[0.5,1],[1,1.4])
+
   return (
     <div ref={targetRef} className="flex min-h-screen flex-col items-center justify-between">
 
-      <div className="w-screen h-screen bg-black"></div>
-      {/* <div className="w-screen h-screen bg-[#fff3cd]"></div> */}
+      {/* <div className="w-screen h-screen bg-black"></div> */}
+      <div className="w-screen h-screen bg-[#fff3cd]"></div>
       {/* ============================ */}
 
 
-      <div className="w-screen h-screen overflow-y-hidden flex gap-2 bg-white">
+      <div className="w-screen h-screen overflow-y-hidden  flex gap-8 bg-white">
 
         <motion.div
           className="h-screen gap-2 w-[25%] relative cards"
@@ -51,32 +55,36 @@ export default function Home() {
         >
           {
             arr.map((e, i) => {
-              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-2 bg-violet-500 relative`}>
-                <Image fill={true} src={"https://images.unsplash.com/photo-1709393361159-b915b32b061a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"} />
+              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
+                <Image fill={true} src={images[i]} />
               </div>
             })
           }
         </motion.div>
+
+
         <motion.div
           className="h-screen gap-2 w-[25%] relative cards"
           style={{y:y2}}
         >
           {
             arr.map((e, i) => {
-              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-2 bg-violet-500 relative`}>
-                <Image fill={true} src={"https://images.unsplash.com/photo-1709393361159-b915b32b061a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"} />
+              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
+                <Image fill={true} src={images[(i+2)%5]} />
               </div>
             })
           }
         </motion.div>
+        
+        
         <motion.div
           className="h-screen gap-2 w-[25%] relative cards"
           style={{y:y3}}
         >
           {
             arr.map((e, i) => {
-              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-2 bg-violet-500 relative`}>
-                <Image fill={true} src={"https://images.unsplash.com/photo-1709393361159-b915b32b061a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"} />
+              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
+                <Image fill={true} src={images[(i+3)%5]} />
               </div>
             })
           }
@@ -87,8 +95,8 @@ export default function Home() {
         >
           {
             arr.map((e, i) => {
-              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-2 bg-violet-500 relative`}>
-                <Image fill={true} src={"https://images.unsplash.com/photo-1709393361159-b915b32b061a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"} />
+              return <div key={(i + Math.random()*1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
+                <Image fill={true} src={images[i]} />
               </div>
             })
           }
@@ -98,8 +106,29 @@ export default function Home() {
 
 
       {/* ============================ */}
-      {/* <div className="w-screen h-screen bg-[#fff3cd]"></div> */}
-<div className="w-screen h-screen bg-black"></div>
+      <div className="w-screen h-screen bg-[#fff3cd] p-16 flex justify-between items-center max-sm:flex-col gap-16">
+        <div className="flex-grow h-full bg-black overflow-hidden">
+          <motion.div 
+          
+          className="w-full h-full bg-red-400 relative"
+          style={{scale}}
+          >
+              <Image fill={true}  src={images[0]}/>
+          </motion.div>
+        </div>
+        <div className="flex-grow h-full bg-black overflow-hidden">
+          <motion.div 
+          
+          className="w-full h-full bg-red-400 relative"
+          style={{scale}}
+          >
+              <Image fill={true}  src={images[3]}/>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="w-screen h-screen bg-[#fff3cd]"></div>
+
 
     </div>
   );
