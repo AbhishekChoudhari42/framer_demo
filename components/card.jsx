@@ -16,7 +16,7 @@ const Card = (props) => {
     const rotate = useTransform(scrollYProgress, [0, 0.5], [5, 0])
 
     return (
-        <div ref={targetRef} className='imgcard relative w-[400px] h-[400px] bg-red-500 overflow-hidden top-8' style={{scale}}>
+        <div ref={targetRef} className='imgcard relative w-[320px] h-[400px] bg-red-500 overflow-hidden top-8' style={{scale}}>
             <motion.div className='w-full h-full' style={{scale,rotate}}>
                 <Image fill={true} src={props.src} />
             </motion.div>

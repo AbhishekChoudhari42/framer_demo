@@ -42,19 +42,19 @@ export default function Home() {
   
   const backgroundColor = useTransform(scrollYProgress,[0.58,0.6],['#fff','#000'])
   
-  const ty1 = useTransform(scrollYProgress,[0.12,0.2],[0,-200],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
-  const ty2 = useTransform(scrollYProgress,[0.12,0.2],[0,100],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
-  const ty3 = useTransform(scrollYProgress,[0.12,0.2],[0,400],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
-  const tx1 = useTransform(scrollYProgress,[0.12,0.2],[0,-200],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
-  const tx2 = useTransform(scrollYProgress,[0.12,0.2],[0,100],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
-  const tx3 = useTransform(scrollYProgress,[0.12,0.2],[0,400],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const ty1 = useTransform(scrollYProgress,[0.14,0.2],[0,-200],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const ty2 = useTransform(scrollYProgress,[0.14,0.2],[0,100],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const ty3 = useTransform(scrollYProgress,[0.14,0.2],[0,400],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const tx1 = useTransform(scrollYProgress,[0.14,0.2],[0,-200],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const tx2 = useTransform(scrollYProgress,[0.14,0.2],[0,100],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const tx3 = useTransform(scrollYProgress,[0.14,0.2],[0,400],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
 
   return (
     <div ref={targetRef} className="flex min-h-screen flex-col items-center justify-between">
 
       {/* <div className="w-screen h-screen bg-black"></div> */}
       <div className="w-screen h-screen bg-[#fff] flex justify-center items-center overflow-hidden">
-        <div className="flex text-8xl font-extrabold text-neutral-900">
+        <div className="flex text-8xl max-sm:text-2xl font-extrabold text-neutral-900">
           <motion.h1 style={{y:ty1,x:tx1}}>JUST</motion.h1>
           <motion.h1 style={{y:ty2}} className="txt">SCROLL</motion.h1> 
           <motion.h1 style={{y:ty3,x:tx3}} className="txt">IT!!!</motion.h1>
@@ -145,7 +145,7 @@ export default function Home() {
       </div>
 
 
-      <div className="w-screen h-[100px] bg-[#fff]"></div>
+      <div className="w-screen h-[100px] bg-[#fff] p-4"></div>
 
       <motion.div className="w-screen flex justify-center items-center flex-col gap-8 bg-ease" style={{backgroundColor}}>
       {

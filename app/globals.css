@@ -7,14 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.card{
-  /* border-radius: 20px;
-  overflow: hidden; */
+html{
+  width: 100vw;
 }
 
 .cards{
   top: -50%;
+  
 }
 
 .imgcard{
