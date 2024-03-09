@@ -1,9 +1,10 @@
 "use client"
 import Image from "next/image";
 import React, { useEffect, useRef } from 'react'
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, cubicBezier, useScroll, useTransform } from "framer-motion"
 import Lenis from "@studio-freight/lenis";
 import { images } from "@/constants";
+import Card from "@/components/card";
 
 export default function Home() {
 
@@ -36,14 +37,29 @@ export default function Home() {
   const y2 = useTransform(scrollYProgress,[0,1],['0%','-100%'])
   const y3 = useTransform(scrollYProgress,[0,1],['0%','-70%'])
   const y4 = useTransform(scrollYProgress,[0,1],['0%','-120%'])
-
-  const scale = useTransform(scrollYProgress,[0.5,1],[1,1.4])
+  
+  const scale = useTransform(scrollYProgress,[0,1],[1,2])
+  
+  const backgroundColor = useTransform(scrollYProgress,[0.58,0.6],['#fff','#000'])
+  
+  const ty1 = useTransform(scrollYProgress,[0.12,0.2],[0,-200],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const ty2 = useTransform(scrollYProgress,[0.12,0.2],[0,100],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const ty3 = useTransform(scrollYProgress,[0.12,0.2],[0,400],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const tx1 = useTransform(scrollYProgress,[0.12,0.2],[0,-200],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const tx2 = useTransform(scrollYProgress,[0.12,0.2],[0,100],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
+  const tx3 = useTransform(scrollYProgress,[0.12,0.2],[0,400],{ ease: cubicBezier(0.17, 0.67, 0.83, 0.67) })
 
   return (
     <div ref={targetRef} className="flex min-h-screen flex-col items-center justify-between">
 
       {/* <div className="w-screen h-screen bg-black"></div> */}
-      <div className="w-screen h-screen bg-[#fff]"></div>
+      <div className="w-screen h-screen bg-[#fff] flex justify-center items-center overflow-hidden">
+        <div className="flex text-8xl font-extrabold text-neutral-900">
+          <motion.h1 style={{y:ty1,x:tx1}}>JUST</motion.h1>
+          <motion.h1 style={{y:ty2}} className="txt">SCROLL</motion.h1> 
+          <motion.h1 style={{y:ty3,x:tx3}} className="txt">IT!!!</motion.h1>
+        </div>
+      </div>
       {/* ============================ */}
 
 
@@ -89,6 +105,7 @@ export default function Home() {
             })
           }
         </motion.div>
+        
         <motion.div
           className="h-screen gap-2 w-[25%] relative cards"
           style={{y:y4}}
@@ -106,7 +123,7 @@ export default function Home() {
 
 
       {/* ============================ */}
-      <div className="w-screen h-screen bg-[#fff] p-16 flex justify-between items-center max-sm:flex-col gap-16">
+      <div className="w-screen h-screen bg-[#fff] p-16 flex justify-between items-center max-sm:hidden gap-16">
         <div className="flex-grow h-full bg-black overflow-hidden">
           <motion.div 
           
@@ -127,8 +144,18 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-screen h-screen bg-[#fff]"></div>
 
+      <div className="w-screen h-[100px] bg-[#fff]"></div>
+
+      <motion.div className="w-screen flex justify-center items-center flex-col gap-8 bg-ease" style={{backgroundColor}}>
+      {
+        arr.map((el,i)=>{
+          return <Card src={images[i]}/>
+        })
+      }
+      </motion.div>
+
+      <div className="w-screen h-screen bg-[#000]"></div>
 
     </div>
   );
