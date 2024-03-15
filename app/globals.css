@@ -7,8 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html,body{
   width: 100vw;
+  /* overflow-x: hidden; */
 }
 
 .cards{
@@ -26,4 +27,11 @@ html{
 
 .bg-ease{
   transition: 0.5s ease;
+}
+
+
+.bg-anime{
+  background-size: cover;
+  background-position: center center;
+  background-image: url("https://c.tenor.com/ldOfR4BrgwAAAAAd/tenor.gif");
 }
