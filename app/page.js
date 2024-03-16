@@ -9,15 +9,12 @@ import ThreeDScroll from "@/components/three-d-scroll";
 export default function Home() {
 
   useEffect(() => {
-  
     const lenis = new Lenis()
-
     function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-  
   }, [])
 
 
@@ -25,7 +22,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-between">
       <Overlay />
       {/* <HorizontalScroll /> */}
-      {/* <ThreeDScroll /> */}
+      <ThreeDScroll />
     </div>
   );
 }

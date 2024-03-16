@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   min-width: 0;
-  max-width: 1200px;
+  max-width: 1300px;
+  box-sizing: border-box;
 }
 body{
   width: 100vw;

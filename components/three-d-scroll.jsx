@@ -23,13 +23,13 @@ const ThreeDScroll = () => {
     })
 
     return (
-        <div ref={horizontalScrollRef} className='h-[1100vh] w-full bg-white relative'>
+        <div ref={horizontalScrollRef} className='h-[1100vh] w-screen bg-white relative'>
             {
                 arr.map((el)=>{
                    const r = Math.floor(Math.random()*255);
                    const g = Math.floor(Math.random()*255);
                    const b = Math.floor(Math.random()*255);
-                   return <motion.div style={{opacity:el.opacity,scale:el.scale,perspective:0,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px] sticky top-[50vh] left-[50%] translate-x-[100px]'>
+                   return <motion.div style={{opacity:el.opacity,scale:el.scale,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px] sticky top-[50vh] left-[50%] -translate-x-[-50%]'>
                         
                           </motion.div>
                 })
