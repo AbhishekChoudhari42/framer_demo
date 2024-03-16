@@ -6,6 +6,7 @@ import Lenis from "@studio-freight/lenis";
 import { images } from "@/constants";
 import Card from "@/components/card";
 import Overlay from "@/components/overlay";
+import HorizontalScroll from "@/components/horizontal-scroll";
 
 export default function Home() {
 
@@ -159,7 +160,7 @@ export default function Home() {
           })
         }
       </motion.div>
-
+        <HorizontalScroll/>
       <div className="w-screen h-screen bg-[#000]"></div>
 
     </div>
