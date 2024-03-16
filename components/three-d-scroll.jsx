@@ -18,20 +18,22 @@ const ThreeDScroll = () => {
     arr = arr.map((el,index)=>{
         return {    translateZ : useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [-2,0]),
                     opacity: useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [0.5,1]),
-                    scale: useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [0,4])
+                    scale: useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [0.5,3])
                 }
     })
 
     return (
-        <div ref={horizontalScrollRef} className='h-[1100vh] w-screen bg-white relative'>
+        <div ref={horizontalScrollRef} className='h-[1000vh] w-screen bg-white relative'>
             {
                 arr.map((el)=>{
                    const r = Math.floor(Math.random()*255);
                    const g = Math.floor(Math.random()*255);
                    const b = Math.floor(Math.random()*255);
-                   return <motion.div style={{opacity:el.opacity,scale:el.scale,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px] sticky top-[50vh] left-[50%] -translate-x-[-50%]'>
+                   return <div className='w-screen h-screen flex justify-center items-center sticky top-0'>
+                                <motion.div style={{opacity:el.opacity,scale:el.scale,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px]'>
+                                </motion.div>
+                           </div>
                         
-                          </motion.div>
                 })
             }
         </div>

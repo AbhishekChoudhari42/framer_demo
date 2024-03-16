@@ -23,6 +23,7 @@ export default function Home() {
       <Overlay />
       <HorizontalScroll />
       <ThreeDScroll />
+      <div className="w-screen h-screen"></div>
     </div>
   );
 }

@@ -16,8 +16,7 @@ const HorizontalScroll = () => {
 
     return (
         <div ref={horizontalScrollRef} className='w-screen h-[300vh]'>
-            <div className='sticky top-0'>
-                <motion.div style={{ x }} className='w-[300vw] h-screen flex flex-shrink-0 items-center '>
+                <motion.div style={{ x }} className='w-[300vw] h-screen flex flex-shrink-0 items-center sticky top-0 '>
                     
                     <div className='w-screen h-screen  flex-shrink-0 p-2 flex items-center justify-center'>
                         <motion.div style={{}} className='w-[80%] h-full relative '>
@@ -38,7 +37,6 @@ const HorizontalScroll = () => {
                     </div>
                 
                 </motion.div>
-            </div>
         </div>
     )
 }
