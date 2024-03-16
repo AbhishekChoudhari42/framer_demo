@@ -43,11 +43,11 @@ export default function Home() {
 
   const backgroundColor = useTransform(scrollYProgress, [0.58, 0.6], ['#fff', '#000'])
 
-  const ty1 = useTransform(scrollYProgress, [0.22, 0.5], [0, -200])
-  const ty2 = useTransform(scrollYProgress, [0.22, 0.5], [0, 100])
-  const ty3 = useTransform(scrollYProgress, [0.22, 0.5], [0, 400])
-  const tx1 = useTransform(scrollYProgress, [0.22, 0.5], [0, -200])
-  const tx3 = useTransform(scrollYProgress, [0.22, 0.5], [0, 400])
+  const ty1 = useTransform(scrollYProgress, [0.27, 0.5], [0, -200])
+  const ty2 = useTransform(scrollYProgress, [0.27, 0.5], [0, 100])
+  const ty3 = useTransform(scrollYProgress, [0.27, 0.5], [0, 400])
+  const tx1 = useTransform(scrollYProgress, [0.27, 0.5], [0, -200])
+  const tx3 = useTransform(scrollYProgress, [0.27, 0.5], [0, 400])
 
 
 

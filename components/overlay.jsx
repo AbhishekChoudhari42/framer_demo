@@ -15,12 +15,12 @@ const Overlay = () => {
     const opacity = useTransform(scrollYProgress, [0.5, 0.75], [1,0])
 
   return (
-    <div ref={overlayRef} className="w-full h-[200vh] bg-black relative">
+    <div ref={overlayRef} className="w-full h-[150vh] bg-black relative">
     <div className="sticky w-screen h-screen top-0 overflow-hidden">
       <div className="bg-white w-screen h-screen absolute top-0 flex justify-center items-center"><motion.h1 style={{opacity}} className="font-bold text-7xl">Scroll</motion.h1></div>
-      <motion.div style={{ clipPath}} className="bg-black text-white w-screen h-screen absolute top-0">
+      <motion.div style={{rotate,clipPath}} className="bg-black text-white w-screen h-screen absolute top-0">
         <div className="w-screen h-screen flex justify-center items-center bg-anime">
-          <motion.h1 style={{}} className="font-bold text-7xl">Scroll</motion.h1>
+          <motion.h1 style={{rotate:rotateReverse}} className="font-bold text-7xl">Scroll</motion.h1>
         </div>
       </motion.div>
     </div>
