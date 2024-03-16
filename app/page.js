@@ -7,6 +7,7 @@ import { images } from "@/constants";
 import Card from "@/components/card";
 import Overlay from "@/components/overlay";
 import HorizontalScroll from "@/components/horizontal-scroll";
+import ThreeDScroll from "@/components/three-d-scroll";
 
 export default function Home() {
 
@@ -54,15 +55,15 @@ export default function Home() {
 
   return (
     <div ref={targetRef} className="flex min-h-screen flex-col items-center justify-between">
-      
-      <Overlay/>
+
+      <Overlay />
 
 
       {/* <div className="w-screen h-screen bg-black"></div> */}
       <div className="w-screen h-screen bg-[#fff] flex justify-center items-center overflow-hidden">
         <div className="flex text-8xl max-sm:text-2xl font-extrabold text-neutral-900">
-          <motion.h1 style={{  x: tx1 }}>JUST</motion.h1>
-          <motion.h1 style={{  }} className="txt">SCROLL</motion.h1>
+          <motion.h1 style={{ x: tx1 }}>JUST</motion.h1>
+          <motion.h1 style={{}} className="txt">SCROLL</motion.h1>
           <motion.h1 style={{ x: tx3 }} className="txt">IT!!!</motion.h1>
         </div>
       </div>
@@ -160,7 +161,8 @@ export default function Home() {
           })
         }
       </motion.div>
-        <HorizontalScroll/>
+      <HorizontalScroll />
+      <ThreeDScroll />
       <div className="w-screen h-screen bg-[#000]"></div>
 
     </div>
