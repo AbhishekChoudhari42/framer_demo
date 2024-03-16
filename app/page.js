@@ -60,9 +60,9 @@ export default function Home() {
       {/* <div className="w-screen h-screen bg-black"></div> */}
       <div className="w-screen h-screen bg-[#fff] flex justify-center items-center overflow-hidden">
         <div className="flex text-8xl max-sm:text-2xl font-extrabold text-neutral-900">
-          <motion.h1 style={{ y: ty1, x: tx1 }}>JUST</motion.h1>
-          <motion.h1 style={{ y: ty2 }} className="txt">SCROLL</motion.h1>
-          <motion.h1 style={{ y: ty3, x: tx3 }} className="txt">IT!!!</motion.h1>
+          <motion.h1 style={{  x: tx1 }}>JUST</motion.h1>
+          <motion.h1 style={{  }} className="txt">SCROLL</motion.h1>
+          <motion.h1 style={{ x: tx3 }} className="txt">IT!!!</motion.h1>
         </div>
       </div>
       {/* ============================ */}

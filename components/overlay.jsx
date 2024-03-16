@@ -12,7 +12,7 @@ const Overlay = () => {
     const clipPath = useTransform(scrollYProgress, [0, 0.5], ["inset(0%)", "inset(100%)"])
     const rotate = useTransform(scrollYProgress, [0, 0.5], [0,40])
     const rotateReverse = useTransform(scrollYProgress, [0, 0.5], [0,-40])
-    const opacity = useTransform(scrollYProgress, [0.5, 0.75], [1,0])
+    const opacity = useTransform(scrollYProgress, [0.4, 0.65], [1,0])
 
   return (
     <div ref={overlayRef} className="w-full h-[150vh] bg-black relative">
