@@ -58,98 +58,11 @@ export default function Home() {
 
       <Overlay />
 
-
-      {/* <div className="w-screen h-screen bg-black"></div> */}
-      <div className="w-screen h-screen bg-[#fff] flex justify-center items-center overflow-hidden">
-        <div className="flex text-8xl max-sm:text-2xl font-extrabold text-neutral-900">
-          <motion.h1 style={{ x: tx1 }}>JUST</motion.h1>
-          <motion.h1 style={{}} className="txt">SCROLL</motion.h1>
-          <motion.h1 style={{ x: tx3 }} className="txt">IT!!!</motion.h1>
-        </div>
-      </div>
-      {/* ============================ */}
-
-
-      <div className="w-screen h-screen overflow-y-hidden  flex gap-8 bg-white">
-
-        <motion.div
-          className="h-screen gap-2 w-[25%] relative cards"
-          style={{ y: y1 }}
-        >
-          {
-            arr.map((e, i) => {
-              return <div key={(i + Math.random() * 1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
-                <Image fill={true} src={images[i]} />
-              </div>
-            })
-          }
-        </motion.div>
-
-
-        <motion.div
-          className="h-screen gap-2 w-[25%] relative cards"
-          style={{ y: y2 }}
-        >
-          {
-            arr.map((e, i) => {
-              return <div key={(i + Math.random() * 1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
-                <Image fill={true} src={images[(i + 2) % 5]} />
-              </div>
-            })
-          }
-        </motion.div>
-
-
-        <motion.div
-          className="h-screen gap-2 w-[25%] relative cards"
-          style={{ y: y3 }}
-        >
-          {
-            arr.map((e, i) => {
-              return <div key={(i + Math.random() * 1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
-                <Image fill={true} src={images[(i + 3) % 5]} />
-              </div>
-            })
-          }
-        </motion.div>
-
-        <motion.div
-          className="h-screen gap-2 w-[25%] relative cards"
-          style={{ y: y4 }}
-        >
-          {
-            arr.map((e, i) => {
-              return <div key={(i + Math.random() * 1000)} className={`w-full h-[500px] mb-8 card bg-neutral-300 relative`}>
-                <Image fill={true} src={images[i]} />
-              </div>
-            })
-          }
-        </motion.div>
-
-      </div>
+      
 
 
       {/* ============================ */}
-      <div className="w-screen h-screen bg-[#fff] p-16 flex justify-between items-center max-sm:hidden gap-16">
-        <div className="flex-grow h-full bg-black overflow-hidden">
-          <motion.div
 
-            className="w-full h-full bg-red-400 relative"
-            style={{ scale }}
-          >
-            <Image fill={true} src={images[0]} />
-          </motion.div>
-        </div>
-        <div className="flex-grow h-full bg-black overflow-hidden">
-          <motion.div
-
-            className="w-full h-full bg-red-400 relative"
-            style={{ scale }}
-          >
-            <Image fill={true} src={images[3]} />
-          </motion.div>
-        </div>
-      </div>
 
 
       <div className="w-screen h-[100px] bg-[#fff] p-4"></div>

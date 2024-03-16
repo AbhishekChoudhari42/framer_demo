@@ -23,7 +23,7 @@ const ThreeDScroll = () => {
     })
 
     return (
-        <div ref={horizontalScrollRef} className='h-[1100vh] w-full bg-white relative '>
+        <div ref={horizontalScrollRef} className='h-[1100vh] w-full bg-white relative'>
             {
                 arr.map((el)=>{
                    const r = Math.floor(Math.random()*255);
