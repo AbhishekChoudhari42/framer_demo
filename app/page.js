@@ -5,6 +5,7 @@ import { motion, cubicBezier, useScroll, useTransform } from "framer-motion"
 import Lenis from "@studio-freight/lenis";
 import { images } from "@/constants";
 import Card from "@/components/card";
+import Overlay from "@/components/overlay";
 
 export default function Home() {
 
@@ -48,23 +49,13 @@ export default function Home() {
   const tx1 = useTransform(scrollYProgress, [0.22, 0.5], [0, -200])
   const tx3 = useTransform(scrollYProgress, [0.22, 0.5], [0, 400])
 
-  const clipPath = useTransform(scrollYProgress, [0.11, 0.15], ["inset(0%)", "inset(100%)"])
-  const rotate = useTransform(scrollYProgress, [0.11, 0.15], [0,40])
-  const rotateReverse = useTransform(scrollYProgress, [0.11, 0.15], [0,-40])
+
 
   return (
     <div ref={targetRef} className="flex min-h-screen flex-col items-center justify-between">
+      
+      <Overlay/>
 
-      <div className="w-full h-[150vh] bg-black relative">
-        <div className="sticky w-screen h-screen top-0">
-          <div className="bg-white w-screen h-screen absolute top-0 flex justify-center items-center"><h1 className="font-bold text-7xl">Scroll</h1></div>
-          <motion.div style={{ clipPath ,rotate}} className="bg-black text-white w-screen h-screen absolute top-0">
-            <div className="w-screen h-screen flex justify-center items-center bg-anime">
-              <motion.h1 style={{rotate:rotateReverse}} className="font-bold text-7xl">Scroll</motion.h1>
-            </div>
-          </motion.div>
-        </div>
-      </div>
 
       {/* <div className="w-screen h-screen bg-black"></div> */}
       <div className="w-screen h-screen bg-[#fff] flex justify-center items-center overflow-hidden">
