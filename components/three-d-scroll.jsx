@@ -8,7 +8,7 @@ const ThreeDScroll = () => {
     const horizontalScrollRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: horizontalScrollRef,
-        offset: ['start start', 'end end']
+        offset: ['start end', 'end center']
     })
 
     const x = useTransform(scrollYProgress, [0, 1], ['0vw', '-200vw'])
@@ -29,8 +29,8 @@ const ThreeDScroll = () => {
                    const r = Math.floor(Math.random()*255);
                    const g = Math.floor(Math.random()*255);
                    const b = Math.floor(Math.random()*255);
-                   return <div className='w-screen h-screen flex justify-center items-center sticky top-[0px]'>
-                                <motion.div style={{opacity:el.opacity,scale:el.scale,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px]'>
+                   return <div className='w-screen h-screen flex justify-center items-center sticky top-[100px]'>
+                                <motion.div style={{opacity:el.opacity,scale:el.scale,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px] absolute'>
                                 </motion.div>
                            </div>
                         
