@@ -16,7 +16,7 @@ const ThreeDScroll = () => {
     arr = arr.map((el,index)=>{
         return {    translateZ : useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [-2,0]),
                     opacity: useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [0.5,1]),
-                    scale: useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.1], [0.5,3])
+                    scale: useTransform(scrollYProgress, [(index*0.1),(index*0.1)+0.2], [0,4])
                 }
     })
 
