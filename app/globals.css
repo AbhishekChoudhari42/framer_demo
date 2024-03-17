@@ -13,7 +13,9 @@ body{
   width: 100vw;
   overflow-x: hidden;
 }
-
+html{
+  width: 100vw;
+}
 .cards{
   top: -50%;
   
