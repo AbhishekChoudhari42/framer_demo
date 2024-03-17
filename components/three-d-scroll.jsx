@@ -29,7 +29,7 @@ const ThreeDScroll = () => {
                    const r = Math.floor(Math.random()*255);
                    const g = Math.floor(Math.random()*255);
                    const b = Math.floor(Math.random()*255);
-                   return <div className='w-screen h-screen flex justify-center items-center will-change-transform sticky top-[0px]'>
+                   return <div className='w-screen h-screen flex justify-center items-center will-change-transform sticky stick top-[0px]'>
                                 <motion.div style={{opacity:el.opacity,scale:el.scale,backgroundColor:`rgb(${r},${g},${b})`}} className='w-[100px] h-[100px] absolute'>
                                 </motion.div>
                            </div>
