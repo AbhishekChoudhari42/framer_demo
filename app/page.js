@@ -22,7 +22,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-between">
       <Overlay />
       <ThreeDScroll />
-      {/* <HorizontalScroll /> */}
+      <HorizontalScroll />
       <div className="w-screen h-screen"></div>
     </div>
   );

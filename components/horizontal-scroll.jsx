@@ -18,19 +18,19 @@ const HorizontalScroll = () => {
         <div ref={horizontalScrollRef} className='w-screen h-[300vh]'>
                 <motion.div style={{ x }} className='w-[300vw] h-screen flex items-center sticky top-0 '>
                     
-                    <div className='w-screen h-screen  flex-shrink-0 flex items-center justify-center'>
+                    <div key={'pos1'} className='w-screen h-screen  flex-shrink-0 flex items-center justify-center'>
                         <motion.div style={{}} className='w-[80%] h-full relative '>
                             <Image fill={true} src={images[0]} />
                         </motion.div>
                     </div>
                     
-                    <div className='w-screen h-screen  flex-shrink-0 flex items-center justify-center'>
+                    <div key={'pos2'} className='w-screen h-screen  flex-shrink-0 flex items-center justify-center'>
                         <motion.div style={{}} className='w-[80%] h-full relative '>
                             <Image fill={true} src={images[1]} />
                         </motion.div>
                     </div>
 
-                    <div className='w-screen h-screen  flex-shrink-0 flex items-center justify-center'>
+                    <div key={'pos3'} className='w-screen h-screen  flex-shrink-0 flex items-center justify-center'>
                         <motion.div style={{}} className='w-[80%] h-full relative '>
                             <Image fill={true} src={images[2]} />
                         </motion.div>
