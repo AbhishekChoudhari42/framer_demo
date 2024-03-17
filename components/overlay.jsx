@@ -15,7 +15,7 @@ const Overlay = () => {
     const opacity = useTransform(scrollYProgress, [0.4, 0.6], [1,0])
 
   return (
-    <div ref={overlayRef} className="w-screen h-[150vh] bg-black relative">
+    <div ref={overlayRef} className="w-screen h-[150dvh] bg-black relative">
     <div className="sticky w-full h-screen top-0 ">
       <div className="bg-white w-screen h-screen absolute top-0 flex justify-center items-center"><motion.h1 style={{opacity}} className="font-bold text-7xl">Scroll</motion.h1></div>
       <motion.div style={{rotate,clipPath}} className="bg-black text-white w-screen h-screen absolute top-0">
